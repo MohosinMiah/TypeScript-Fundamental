@@ -70,14 +70,38 @@ console.log(isendwithcotherway);
 */
 /**
  *********************    Arrow Functions in TypeScript  ****************
- */
+
+
 //  Without Using Arraow function features
 function homeCountry(country) {
-    console.log(country);
+  console.log(country);
 }
+
 homeCountry("Bangladesh");
+
 // Using Arrow Function features
-var myHomeCountry = function (country) {
-    console.log(country);
+
+let myHomeCountry = (country) => {
+  console.log(country);
 };
+
 myHomeCountry("Bangladesh");
+ */
+/**
+ *********************    Interface in (Custom Types) TypeScript  ****************
+ */
+var drawPoint = function (_a) {
+    var x = _a.x, y = _a.y;
+    console.log("X = " + x + " " + " Y = " + y);
+};
+drawPoint({
+    x: 1,
+    y: 2
+});
+var drowPointAnother = function (point) {
+    console.log("Point Interface X = " + point.x + " Y = " + point.y);
+};
+drowPointAnother({
+    x: 1,
+    y: 2
+});
