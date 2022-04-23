@@ -59,9 +59,25 @@ let backgroundColor = Color.Red;
  */
 /**
  *********************    Type Assertions in TypeScript  ****************
- */
-var message_two;
+ 
+
+let message_two;
 message_two = "abc";
-var isendwithc = message_two.endsWith("c");
-var isendwithcotherway = message_two.endsWith("c");
+let isendwithc = (<string>message_two).endsWith("c");
+let isendwithcotherway = (message_two as string).endsWith("c");
+
 console.log(isendwithcotherway);
+*/
+/**
+ *********************    Arrow Functions in TypeScript  ****************
+ */
+//  Without Using Arraow function features
+function homeCountry(country) {
+    console.log(country);
+}
+homeCountry("Bangladesh");
+// Using Arrow Function features
+var myHomeCountry = function (country) {
+    console.log(country);
+};
+myHomeCountry("Bangladesh");
