@@ -123,9 +123,9 @@ drowPointAnother({
 
 /**
  *********************    Class TypeScript  ****************
- */
 
-// Lets using Interface
+
+// Lets using Class and constructure
 class PointB {
   x: number;
   y: number;
@@ -139,6 +139,18 @@ class PointB {
     console.log("X = " + this.x + " Y = " + this.y);
   }
 }
+
+let obj = new PointB(1, 2);
+// point.x = 11;
+// point.y = 22;
+obj.draw();
+
+*/
+
+/**
+ *********************    Module TypeScript  ****************
+ */
+import { PointB } from "./point";
 
 let obj = new PointB(1, 2);
 // point.x = 11;

@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 function log(message) {
     console.log(message);
 }
@@ -115,19 +117,34 @@ drowPointAnother({
 */
 /**
  *********************    Class TypeScript  ****************
+
+
+// Lets using Class and constructure
+class PointB {
+  x: number;
+  y: number;
+
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+
+  draw(): void {
+    console.log("X = " + this.x + " Y = " + this.y);
+  }
+}
+
+let obj = new PointB(1, 2);
+// point.x = 11;
+// point.y = 22;
+obj.draw();
+
+*/
+/**
+ *********************    Module TypeScript  ****************
  */
-// Lets using Interface
-var PointB = /** @class */ (function () {
-    function PointB(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-    PointB.prototype.draw = function () {
-        console.log("X = " + this.x + " Y = " + this.y);
-    };
-    return PointB;
-}());
-var obj = new PointB(1, 2);
+var point_1 = require("./point");
+var obj = new point_1.PointB(1, 2);
 // point.x = 11;
 // point.y = 22;
 obj.draw();

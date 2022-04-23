@@ -16,3 +16,5 @@
 5. Interface in (Custom Types) TypeScript
 
 6. Class && Constructors in TypeScript
+
+7. Module in TypeScript
