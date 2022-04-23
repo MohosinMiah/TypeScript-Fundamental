@@ -14,3 +14,5 @@
 4. Arrow Functions in TypeScript
 
 5. Interface in (Custom Types) TypeScript
+
+6. Class && Constructors in TypeScript

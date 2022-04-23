@@ -89,19 +89,45 @@ myHomeCountry("Bangladesh");
  */
 /**
  *********************    Interface in (Custom Types) TypeScript  ****************
- */
-var drawPoint = function (_a) {
-    var x = _a.x, y = _a.y;
-    console.log("X = " + x + " " + " Y = " + y);
+ 
+
+let drawPoint = ({ x, y }) => {
+  console.log("X = " + x + " " + " Y = " + y);
 };
 drawPoint({
-    x: 1,
-    y: 2
+  x: 1,
+  y: 2,
 });
-var drowPointAnother = function (point) {
-    console.log("Point Interface X = " + point.x + " Y = " + point.y);
+
+// Lets using Interface
+interface PointA {
+  x: number,
+  y: number
+}
+
+let drowPointAnother = (point: Point) => {
+  console.log("Point Interface X = " + point.x + " Y = " + point.y);
 };
 drowPointAnother({
-    x: 1,
-    y: 2
+  x: 1,
+  y: 2,
 });
+*/
+/**
+ *********************    Class TypeScript  ****************
+ */
+// Lets using Interface
+var PointB = /** @class */ (function () {
+    function PointB(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    PointB.prototype.draw = function () {
+        console.log("X = " + this.x + " Y = " + this.y);
+    };
+    return PointB;
+}());
+var obj = new PointB(1, 2);
+// point.x = 11;
+// point.y = 22;
+obj.draw();
