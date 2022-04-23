@@ -61,3 +61,14 @@ enum Color {
 
 let backgroundColor = Color.Red;
  */
+
+/**
+ *********************    Type Assertions in TypeScript  ****************
+ */
+
+let message_two;
+message_two = "abc";
+let isendwithc = (<string>message_two).endsWith("c");
+let isendwithcotherway = (message_two as string).endsWith("c");
+
+console.log(isendwithcotherway);
